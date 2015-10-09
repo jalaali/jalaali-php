@@ -263,3 +263,4 @@ function div($first, $second) {
 function mod($first, $second) {
   return $first - floor($first / $second) * $second;
 }
+
