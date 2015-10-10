@@ -3,9 +3,9 @@
  * Jalaali PHP Implementation based on [JalaaliJS](https://github.com/jalaali/jalaali-js).
  * 
  * @author Navid Emami <me@novid.name>
- * @filesource
  * @license MIT
  * @license https://opensource.org/licenses/MIT
+ * @version 0.1 Development Release
  */
 
 /**
