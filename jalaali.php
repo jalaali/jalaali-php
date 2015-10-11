@@ -108,7 +108,9 @@ function jalaaliCalendar($jy) {
   for ($i = 1; $i < $bl; $i++) {
     $jm = $breaks[$i];
     $jump = $jm - $jp;
-    if ($jy < $jm) break;
+    if ($jy < $jm) {
+      break;
+    }
     $leapJ = $leapJ + div($jump, 33) * 8 + div(mod($jump, 33), 4);
     $jp = $jm;
   }
@@ -116,7 +118,9 @@ function jalaaliCalendar($jy) {
 
   // find the number of leap years from AD 621 to the beginning of the current jalaali year in the persian calendar.
   $leapJ = $leapJ + div($n, 33) * 8 + div(mod($n, 33) + 3, 4);
-  if (mod($jump, 33) == 4 && $jump - $n == 4) $leapJ += 1;
+  if (mod($jump, 33) == 4 && ($jump - $n) == 4) {
+    $leapJ += 1;
+  }
 
   // and the same in the gregorian calendar (until the year gy).
   $leapG = div($gy, 4) - div((div($gy, 100) + 1) * 3, 4) - 150;
