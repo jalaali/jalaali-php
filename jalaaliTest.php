@@ -15,11 +15,13 @@ class JalaaliTest extends PHPUnit_Framework_Testcase
     public function testToJalaali()
     {
         $this->assertEquals(toJalaali(1989, 01, 28), array('jy' => 1367, 'jm' => 11, 'jd' => 08));
+        $this->assertEquals(toJalaali(2015, 10, 10), array('jy' => 1394, 'jm' => 07, 'jd' => 18));
     }
     
     public function testToGregorian()
     {
         $this->assertEquals(toGregorian(1367, 11, 08), array('gy' => 1989, 'gm' => 01, 'gd' => 28));
+        $this->assertEquals(toGregorian(1394, 07, 18), array('gy' => 2015, 'gm' => 10, 'gd' => 10));
     }
     
     public function testIsValidJalaaliDate()
@@ -43,7 +45,7 @@ class JalaaliTest extends PHPUnit_Framework_Testcase
         $this->assertEquals(jalaaliMonthLength(1393, 01), 31);
         $this->assertEquals(jalaaliMonthLength(1393, 03), 31);
         $this->assertEquals(jalaaliMonthLength(1393, 06), 31);
-        $this->assertEquals(jalaaliMonthLength(1393, 08), 30);
+        $this->assertEquals(jalaaliMonthLength(1393, 08), 31);
         $this->assertEquals(jalaaliMonthLength(1393, 10), 30);
         $this->assertEquals(jalaaliMonthLength(1393, 12), 29);
         $this->assertEquals(jalaaliMonthLength(1394, 12), 29);

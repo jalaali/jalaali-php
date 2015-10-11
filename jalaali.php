@@ -101,7 +101,7 @@ function jalaaliCalendar($jy) {
   $jp = $breaks[0];
 
   if ($jy < $jp || $jy >= $breaks[$bl - 1]) {
-    throw new Exception('Invalid Jalaali year: ' + $jy);
+    throw new Exception('Invalid Jalaali Year: ' . $jy);
   }
 
   // find the limiting years for the jalaali year jy.
@@ -249,7 +249,7 @@ function d2g($jdn) {
  * @return integer division result
  */
 function div($first, $second) {
-  return floor($first / $second);
+  return ceil($first / $second);
 }
 
 /**
