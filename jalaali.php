@@ -149,8 +149,6 @@ function jalaaliCalendar($jy) {
  * @param integer $jd Jalaali Day (1 to 29/31)
  * 
  * @return $jdn Julian Day Number
- * 
- * @todo check the algorithm correctness ...
  */
 function j2d($jy, $jm, $jd) {
   $result = jalaaliCalendar($jy);
@@ -163,8 +161,6 @@ function j2d($jy, $jm, $jd) {
  * @param integer $jdn Julian Day Number
  * 
  * @return array Containing $jy, $jm and $jd
- * 
- * @todo check the algorithm correctness ...
  */
 function d2j($jdn) {
   // calculate gregorian year
@@ -212,8 +208,6 @@ function d2j($jdn) {
  * @param integer $gd Gregorian Day (1 to 28/29/30/31)
  * 
  * @return $jdn Julian Day Number
- * 
- * @todo check the algorithm correctness ...
  */
 function g2d($gy, $gm, $gd) {
   $jdn = div(($gy + div($gm - 8, 6) + 100100) * 1461, 4) + div(153 * mod($gm + 9, 12) + 2, 5) + $gd - 34840408;
@@ -230,8 +224,6 @@ function g2d($gy, $gm, $gd) {
  * @param integer $jdn Julian Day Number
  * 
  * @return array Containing $gy, $gm and $gd
- * 
- * @todo check the algorithm correctness ...
  */
 function d2g($jdn) {
   $j = 4 * $jdn + 139361631 + div(div(4 * $jdn + 183187720, 146097) * 3, 4) * 4 - 3908;
@@ -253,7 +245,7 @@ function d2g($jdn) {
  * @return integer division result
  */
 function div($first, $second) {
-  return ceil($first / $second);
+  return ~~($first / $second);
 }
 
 /**
@@ -265,5 +257,5 @@ function div($first, $second) {
  * @return integer modulo result
  */
 function mod($first, $second) {
-  return $first - floor($first / $second) * $second;
+  return $first - ~~($first / $second) * $second;
 }

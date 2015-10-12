@@ -14,21 +14,21 @@ class JalaaliTest extends PHPUnit_Framework_Testcase
 {
     public function testToJalaali()
     {
-        $this->assertEquals(toJalaali(1989, 01, 28), array('jy' => 1367, 'jm' => 11, 'jd' => 08));
-        $this->assertEquals(toJalaali(2015, 10, 10), array('jy' => 1394, 'jm' => 07, 'jd' => 18));
+        $this->assertEquals(array('jy' => 1367, 'jm' => 11, 'jd' => 8), toJalaali(1989, 1, 28));
+        $this->assertEquals(array('jy' => 1394, 'jm' => 7, 'jd' => 18), toJalaali(2015, 10, 10));
     }
     
     public function testToGregorian()
     {
-        $this->assertEquals(toGregorian(1367, 11, 08), array('gy' => 1989, 'gm' => 01, 'gd' => 28));
-        $this->assertEquals(toGregorian(1394, 07, 18), array('gy' => 2015, 'gm' => 10, 'gd' => 10));
+        $this->assertEquals(array('gy' => 1989, 'gm' => 1, 'gd' => 28), toGregorian(1367, 11, 8));
+        $this->assertEquals(array('gy' => 2015, 'gm' => 10, 'gd' => 10), toGregorian(1394, 7, 18));
     }
     
     public function testIsValidJalaaliDate()
     {
         $this->assertFalse(isValidJalaaliDate(-62, 12, 29));
-        $this->assertFalse(isValidJalaaliDate(3178, 01, 01));
-        $this->assertTrue(isValidJalaaliDate(-61, 01, 01));
+        $this->assertFalse(isValidJalaaliDate(3178, 1, 1));
+        $this->assertTrue(isValidJalaaliDate(-61, 1, 1));
         $this->assertTrue(isValidJalaaliDate(3177, 12, 29));
     }
     
@@ -42,13 +42,13 @@ class JalaaliTest extends PHPUnit_Framework_Testcase
     
     public function testJalaaliMonthLength()
     {
-        $this->assertEquals(jalaaliMonthLength(1393, 01), 31);
-        $this->assertEquals(jalaaliMonthLength(1393, 03), 31);
-        $this->assertEquals(jalaaliMonthLength(1393, 06), 31);
-        $this->assertEquals(jalaaliMonthLength(1393, 08), 31);
-        $this->assertEquals(jalaaliMonthLength(1393, 10), 30);
-        $this->assertEquals(jalaaliMonthLength(1393, 12), 29);
-        $this->assertEquals(jalaaliMonthLength(1394, 12), 29);
-        $this->assertEquals(jalaaliMonthLength(1395, 12), 30);
+        $this->assertEquals(31, jalaaliMonthLength(1393, 1));
+        $this->assertEquals(31, jalaaliMonthLength(1393, 3));
+        $this->assertEquals(31, jalaaliMonthLength(1393, 6));
+        $this->assertEquals(30, jalaaliMonthLength(1393, 8));
+        $this->assertEquals(30, jalaaliMonthLength(1393, 10));
+        $this->assertEquals(29, jalaaliMonthLength(1393, 12));
+        $this->assertEquals(29, jalaaliMonthLength(1394, 12));
+        $this->assertEquals(30, jalaaliMonthLength(1395, 12));
     }
 }
