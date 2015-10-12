@@ -1,7 +1,17 @@
 {
     "name": "jalaali/jalaali-php",
-    "description": "Jalaali to Gregorian date conversions and vice versa within the range of -61 to 3177 through Jalaali year.",
+    "type": "library",
+    "description": "Jalaali to Gregorian date converter.",
+    "keywords": ["jalaali", "gregorian", "julian"],
+    "homepage": "https://github.com/novid/jalaali-php",
+    "license": "MIT",
+    "authors": [
+        "name": "Navid Emami",
+        "email": "me@novid.name",
+        "homepage": "http://novid.name",
+        "role": "Developer"
+    ],
     "require": {
-        "php": ">=5.3.0",
+        "php": ">=5.3.0"
     }
 }
