@@ -5,7 +5,7 @@
  * @author Navid Emami <me@novid.name>
  * @license MIT
  * @license https://opensource.org/licenses/MIT
- * @version 0.1 Development Release
+ * @version 1.0.0 Initial Release
  */
 
 /**
