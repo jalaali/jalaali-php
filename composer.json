@@ -2,6 +2,6 @@
     "name": "jalaali/jalaali-php",
     "description": "Jalaali to Gregorian date conversions and vice versa within the range of -61 to 3177 through Jalaali year.",
     "require": {
-        "php": ">=5.3.0",
+        "php": ">=5.3.0"
     }
 }
