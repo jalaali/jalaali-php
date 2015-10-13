@@ -1,9 +1,9 @@
 {
     "name": "jalaali/jalaali-php",
     "type": "library",
-    "description": "Jalaali to Gregorian date converter.",
+    "description": "PHP functions for converting Jalaali and Gregorian calendar systems to each other.",
     "keywords": ["jalaali", "gregorian", "julian"],
-    "homepage": "https://github.com/novid/jalaali-php",
+    "homepage": "https://github.com/jalaali/jalaali-php",
     "license": "MIT",
     "authors": [
         {
