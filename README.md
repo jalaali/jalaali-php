@@ -24,7 +24,14 @@ Use `composer require jalaali/jalaali-php` to add packages to your `composer.jso
 
 ##API
 
-There is a complete documentation page for this project on `docs/api` folder but the list of functions is as follows:
+Base Jalaali class is defined with 10 static methods inside Jalaali namespace, so there's no need for instantiation. For example, to convert Gregorian date to Jalaali use this code:
+
+```php
+// PHP 3.0.x date to Jalaali :)
+\Jalaali\Jalaali::toJalaali(2000, 10, 20)
+```
+
+There is a complete documentation page for this project on `docs/api` folder but the list of methods is as follows:
 
 `toJalaali($gy, $gm, $gd)` : Converts a Gregorian date to Jalaali
 
