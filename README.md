@@ -1,4 +1,4 @@
-#Jalaali PHP
+# Jalaali PHP
 
 PHP implementation of [jalaali.js](https://github.com/jalaali/jalaali-js) which contains functions for converting Jalaali and Gregorian calendar systems to each other.
 
@@ -12,17 +12,17 @@ Jalaali calendar system has different names such as:
 
 The base algorithm is a derived work of [Omar Khayyam](https://en.wikipedia.org/wiki/Omar_Khayy%C3%A1m), who _completed_ the calendar system more than 900 years ago.
 
-##About
+## About
 
 Jalaali calendar is a solar calendar that was used in Persia, variants of which today are still in use in Iran as well as Afghanistan. [Read more](http://en.wikipedia.org/wiki/Jalali_calendar) or see [Calendar Converter](http://www.fourmilab.ch/documents/calendar/).
 
 Calendar conversion is based on the algorithm provided by [Kazimierz M. Borkowski](http://www.astro.uni.torun.pl/~kb/Papers/EMP/PersianC-EMP.htm) and has a very good performance.
 
-##Install
+## Install
 
-Use `composer require jalaali/jalaali-php` to add packages to your `composer.json` file.
+`composer require jalaali/jalaali-php`
 
-##API
+## API
 
 Base Jalaali class is defined with 10 static methods inside Jalaali namespace, so there's no need for instantiation. For example, to convert Gregorian date to Jalaali use this code:
 
